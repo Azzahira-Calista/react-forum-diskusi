@@ -28,6 +28,14 @@ const renderWithProviders = (component) => {
   );
 };
 
+/**
+ * Skenario:
+ * - Pengguna membuka halaman login
+ * - Komponen LoginPage akan dirender di dalam routing dan redux context
+ * - Komponen harus menampilkan input untuk email dan password
+ * - Placeholder "email" dan "password" harus ditemukan di dokumen
+ */
+
 test('renders login inputs', () => {
   renderWithProviders(<LoginPage />);
 

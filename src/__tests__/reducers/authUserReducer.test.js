@@ -3,6 +3,15 @@
 import authUserReducer from '../../states/authUser/reducer';
 import { ActionType } from '../../states/authUser/action';
 
+/**
+ * Skenario:
+ * - authUserReducer menerima state awal dan action SET_AUTH_USER
+ * - Reducer harus mengubah state menjadi user yang diberikan pada payload
+ *
+ * - authUserReducer menerima state awal dan action UNSET_AUTH_USER
+ * - Reducer harus mengubah state menjadi null
+ */
+
 describe('authUserReducer', () => {
   it('should set auth user', () => {
     const initialState = null;

@@ -1,5 +1,11 @@
 import api from '../../utils/api';
 
+const ActionType = {
+  RECEIVE_THREADS: 'threads/receive',
+  ADD_THREAD: 'threads/add',
+  SET_THREAD: 'threads/set',
+};
+
 function receiveThreadsActionCreator(threads) {
   return {
     type: 'threads/receive',
@@ -58,6 +64,7 @@ function asyncGetThreadById(threadId) {
 }
 
 export {
+  ActionType,
   receiveThreadsActionCreator,
   addThreadActionCreator,
   setThreadActionCreator,

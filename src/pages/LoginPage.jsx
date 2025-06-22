@@ -8,9 +8,13 @@ export default function LoginPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const onLogin = ({ email, password }) => {
-    dispatch(asyncSetAuthUser({ email, password }));
-    navigate('/');
+  const onLogin = async ({ email, password }) => {
+    try {
+      await dispatch(asyncSetAuthUser({ email, password }));
+      navigate('/threads');
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
   };
 
   return (
@@ -18,9 +22,8 @@ export default function LoginPage() {
       <h2>Login</h2>
       <LoginInput login={onLogin} />
       <p className="auth-page__register">
-    Don't have an account? <Link to="/register" className="link">Register here</Link>
+        Don't have an account? <Link to="/register" className="link">Register here</Link>
       </p>
     </section>
-
   );
 }
