@@ -4,8 +4,9 @@ import { ActionType } from '../../states/threads/action';
 import api from '../../utils/api';
 import { thunk } from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
+import { vi } from 'vitest';
 
-jest.mock('../../utils/api');
+vi.mock('../../utils/api');
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

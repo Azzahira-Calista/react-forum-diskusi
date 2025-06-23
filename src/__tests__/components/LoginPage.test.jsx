@@ -6,6 +6,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import LoginPage from '../../pages/LoginPage';
+import React from 'react';
 
 const mockStore = configureStore({
   reducer: {

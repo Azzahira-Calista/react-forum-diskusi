@@ -1,5 +1,3 @@
-import '@testing-library/jest-dom';
-
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
 

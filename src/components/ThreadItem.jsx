@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaComments, FaTag, FaUserCircle } from 'react-icons/fa';
 import VoteButtons from './VoteButtons';
