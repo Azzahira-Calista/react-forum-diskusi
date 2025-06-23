@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types';
 import { postedAt } from '../utils/index.js';
+import { Helmet } from 'react-helmet';
 
 export default function ThreadDetail({ title, category, createdAt, owner, body }) {
   return (
     <>
-      <h2 className="thread-title">{title}</h2>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+      <title className="thread-title">{title}</title>
       <div className="thread-meta">
         <span className="category">Category: {category}</span>
         <span>{postedAt(createdAt)}</span>

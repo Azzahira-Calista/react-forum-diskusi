@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaComments, FaTag, FaUserCircle } from 'react-icons/fa';
 import VoteButtons from './VoteButtons';
 import { postedAt } from '../utils';
+import { Helmet } from 'react-helmet';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { asyncToggleUpVoteThreadDetail, asyncToggleDownVoteThreadDetail, asyncToggleNeutralUpVoteThreadDetail } from '../states/threadDetail/action';
@@ -66,6 +67,10 @@ export default function ThreadItem({ thread, users }) {
             <FaTag className="icon" /> #{category}
           </div>
         </div>
+
+        <Helmet>
+          <title>{title}</title>
+        </Helmet>
 
         <h3 className="thread-title">{title}</h3>
 
