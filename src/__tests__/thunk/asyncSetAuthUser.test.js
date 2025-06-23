@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+import { vi } from 'vitest';
 import { asyncSetAuthUser } from '../../states/authUser/action';
 import { ActionType } from '../../states/authUser/action';
 import api from '../../utils/api';
@@ -7,7 +8,7 @@ import configureMockStore from 'redux-mock-store';
 // Try different ways to import thunk
 import * as reduxThunk from 'redux-thunk';
 
-jest.mock('../../utils/api');
+vi.mock('../../utils/api');
 
 // Extract the thunk middleware
 const thunk = reduxThunk.default || reduxThunk.thunk || reduxThunk;
