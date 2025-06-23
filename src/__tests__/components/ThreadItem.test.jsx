@@ -8,10 +8,8 @@ import { MemoryRouter } from 'react-router-dom';
 import { configureStore } from '@reduxjs/toolkit';
 import ThreadItem from '../../components/ThreadItem';
 
-// Store palsu hanya untuk test
 const mockStore = configureStore({
   reducer: {
-    // tambahkan reducer lain jika dibutuhkan oleh komponen
     authUser: (state = null) => state,
   },
 });
