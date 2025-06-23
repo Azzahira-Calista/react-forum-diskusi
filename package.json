@@ -8,11 +8,10 @@
     "build": "vite build",
     "lint": "eslint ./src",
     "preview": "vite preview",
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "e2e": "start-server-and-test start http://localhost:3000 \"cypress run\"",
-    "e2e:open": "start-server-and-test start http://localhost:3000 \"cypress open\"",
-    "ci:test": "react-scripts test --watchAll=false && start-server-and-test start http-get://localhost:3000 e2e"
+    "test": "vitest",
+    "e2e": "start-server-and-test dev http://localhost:5173 \"cypress run\"",
+    "e2e:open": "start-server-and-test dev http://localhost:5173 \"cypress open\"",
+    "ci:test": "vitest run && start-server-and-test dev http://localhost:5173 e2e"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
@@ -43,6 +42,7 @@
     "redux-mock-store": "^1.5.5",
     "redux-thunk": "^3.1.0",
     "start-server-and-test": "^2.0.12",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vitest": "^3.2.4"
   }
 }
